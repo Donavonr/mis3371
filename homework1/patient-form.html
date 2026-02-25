@@ -45,6 +45,8 @@
             <label for="lastname">Last</label>
         </td>
         <td>
+            <div>
+                
              <input type="text"
                     size="25"
                     maxlength="30" 
@@ -52,16 +54,18 @@
                     name="firsttname" 
                     required
                     oninput="this.setCustomValidity('')"
-                    placeholder="(req'd)"
-            >
+                    placeholder="(req'd)">
+   </div>
+
             
             <input type="text" 
                     size="1"
                     maxlength="1" 
                     id="middleinit" 
                     name="middleinit" 
-                    placeholder="Q"
-            >
+                    placeholder="Q">
+            <div>
+                
             <input type="text"
                     size="20"
                     maxlength="30" 
@@ -70,8 +74,8 @@
                     required
                     oninvalid="this.setCustomValidity('Last Name is Required')"
                     oninput="this.setCustomValidity('')"
-                    placeholder="Public (req'd)"
-            >
+                    placeholder="Public (req'd)">
+           </div>
         <span id="name_text"></span>
     </td>
             
