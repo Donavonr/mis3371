@@ -5,6 +5,9 @@ body {
   color: #222222;
   margin: 0;
 }
+#body {
+  padding:40px;
+}
 
 #header {
   background-color: #003366;
@@ -13,7 +16,7 @@ body {
 }
 
 #logo {
-  width: 45px;
+  width: 30px;
   height: auto;
 }
 
