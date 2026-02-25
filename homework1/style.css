@@ -1,6 +1,6 @@
 
 body {
-  background-color: red; /* test color */
+  background-color: #6ba9e8; /* test color */
   font-family: Verdana, Geneva, sans-serif;
   color: #222222;
   margin: 0;
@@ -13,7 +13,7 @@ body {
 }
 
 #logo {
-  width: 70px;
+  width: 45px;
   height: auto;
 }
 
