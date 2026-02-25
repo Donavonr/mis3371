@@ -72,11 +72,18 @@
                     oninput="this.setCustomValidity('')"
                     placeholder="Public (req'd)"
             >
-        <span id="name_text"></td>
+        <span id="name_text"></span>,/td>
+            
     </tr>
        <!-- Sex Radio buttons row -->
        <tr class="form">
            <td align="rigt">Sex</td>td>
+           <td>
+               <label><input type="radio" name="sex" value="Male" required> Male</label>
+               <label><input type="radio" name="sex" value="Female" required> Female</label>
+               <label><input type="radio" name="sex" value="Other" required> Other</label>
+             </td>
+           </td>
     <tr  class="form">
         <td align="right">
             <label for="addr1" >Address Line 1</label>
