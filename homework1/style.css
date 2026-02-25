@@ -1,6 +1,6 @@
 
 body {
-    background-color: #e6f2ff;
+    background-color: #red !important;
     font-family: Verdana, Geneva, sans-serif;
     color: #222222;
     margin: 0;
@@ -51,4 +51,8 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
     background-color: #004080;
+}
+#logo {
+    width: 70px;
+    height: auto;
 }
