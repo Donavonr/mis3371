@@ -39,47 +39,40 @@
         <th class="form" colspan="3">Portal Information</th>
     </tr>
     <tr class="form">
-        <td align="right">
-            <label for="firstname">First Name</label>
-            <label for="middleinit">MI</label>
-            <label for="lastname">Last</label>
+    <td align="right">
+        <label for="firstname">First Name</label>
+    </td>
+    <td>
+        <input type="text"
+               id="firstname"
+               name="firstname"
+               required>
+    </td>
+</tr>
+
+<tr class="form">
+    <td align="right">
+        <label for="middleinit">Middle Initial</label>
         </td>
         <td>
-            <div>
-                
-             <input type="text"
-                    size="25"
-                    maxlength="30" 
-                    id="firstname" 
-                    name="firsttname" 
-                    required
-                    oninput="this.setCustomValidity('')"
-                    placeholder="(req'd)">
-   </div>
-
-            
-            <input type="text" 
-                    size="1"
-                    maxlength="1" 
-                    id="middleinit" 
-                    name="middleinit" 
-                    placeholder="Q">
-            <div>
-                
-            <input type="text"
-                    size="20"
-                    maxlength="30" 
-                    id="lastname" 
-                    name="lastname" 
-                    required
-                    oninvalid="this.setCustomValidity('Last Name is Required')"
-                    oninput="this.setCustomValidity('')"
-                    placeholder="Public (req'd)">
-           </div>
-        <span id="name_text"></span>
+                <input type="text"
+                    id="middleinit"
+                    name="middleinit"
+                    maxlength="1">
     </td>
-            
-    </tr>
+</tr>
+
+<tr class="form">
+    <td align="right">
+        <label for="lastname">Last Name</label>
+    </td>
+    <td>
+        <input type="text"
+               id="lastname"
+               name="lastname"
+               required>
+    </td>
+</tr>
        <!-- Sex Radio buttons row -->
        <tr class="form">
            <td align="rigt">Sex</td>td>
