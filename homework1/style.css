@@ -57,5 +57,5 @@ input[type="reset"] {
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-  background-color: #004080;
+  background-color: white;
 }
