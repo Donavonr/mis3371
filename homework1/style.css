@@ -42,7 +42,7 @@ textarea {
 button,
 input[type="submit"],
 input[type="reset"] {
-  background-color: #2c6faa;
+  background-color: #white;
   color: white;
   padding: 8px 15px;
   border: none;
