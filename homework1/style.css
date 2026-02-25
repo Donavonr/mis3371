@@ -1,13 +1,13 @@
 
 body {
-  background-color: #6ba9e8; 
+  background-color: #8bc2d9; 
   font-family: Verdana, Geneva, sans-serif;
   color: #222222;
   margin: 0;
 }
 
 #header {
-  background-color: #2c6faa;
+  background-color: #003366;
   color: white;
   padding: 15px;
 }
@@ -23,11 +23,7 @@ body {
   text-align: center;
   padding: 20px;
   margin-top: 30px;
-}
 
-#body {
-    background-color: #90bed1;
-    padding: 40px;
 }
 
 .form {
