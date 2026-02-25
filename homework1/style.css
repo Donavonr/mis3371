@@ -1,27 +1,32 @@
 
 body {
-    background-color: #red !important;
-    font-family: Verdana, Geneva, sans-serif;
-    color: #222222;
-    margin: 0;
+  background-color: red; /* test color */
+  font-family: Verdana, Geneva, sans-serif;
+  color: #222222;
+  margin: 0;
 }
 
 #header {
-    background-color: #2c6faa;
-    color: white;
-    padding: 15px;
+  background-color: #2c6faa;
+  color: white;
+  padding: 15px;
+}
+
+#logo {
+  width: 70px;
+  height: auto;
 }
 
 #footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
 }
 
 .form {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 input[type="text"],
@@ -29,30 +34,24 @@ input[type="email"],
 input[type="password"],
 select,
 textarea {
-    border: 1px solid #999;
-    padding: 5px;
-    border-radius: 4px;
+  border: 1px solid #999;
+  padding: 5px;
+  border-radius: 4px;
 }
 
-input[name="sex"] {
-    margin-left: 10px;
-}
-
-button, input[type="submit"], input[type="reset"] {
-    background-color: #2c6faa;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+button,
+input[type="submit"],
+input[type="reset"] {
+  background-color: #2c6faa;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #004080;
-}
-#logo {
-    width: 70px;
-    height: auto;
+  background-color: #004080;
 }
