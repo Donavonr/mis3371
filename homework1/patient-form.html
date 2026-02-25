@@ -46,6 +46,7 @@
         <input type="text"
                id="firstname"
                name="firstname"
+            maxlength="30" required>
                
     </td>
 </tr>
@@ -91,20 +92,20 @@
                       id="dob"
                       name="dob"
                       placeholder="MM/DD/YYYY"
-                      maxlength+"10"
+                      maxlength="10"
                       pattern="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$"
            required>
   </td>
 </tr>
        <tr class="form">
-           <td align="right"
+           <td align="right">
                <label for="ssn">Social Security</label>
    </td>
        <td>
            <input type="password"
                   id="ssn"
                   name="ssn"
-                  placeholder="123=45=6789"
+                  placeholder="123-45-6789"
                   minlength="9"
                   maxlength="11"
                   required>
@@ -259,8 +260,8 @@
             <td align="right">Do you have Insurance?
             </td>
                 <td>
-                    <label><inpput type+"radio" name="insurance" value="Yes" required>Yes</label>
-                    <label><inpput type+"radio" name="insurance" value="No" required>No</label>
+                    <label><input type+"radio" name="insurance" value="Yes" required>Yes</label>
+                    <label><input type+"radio" name="insurance" value="No" required>No</label>
                 </td>
             </tr>
             <tr class="form">
@@ -285,7 +286,7 @@
     <label for="reason">Reason for Visit</label>
         </td>
 <td>
-    <textarea id="reason" name="reason" rows="3" cols+"50"
+    <textarea id="reason" name="reason" rows="3" cols="50"
         placeholder="Describe your symptoms..."></textarea>
 </td>
 </tr>
