@@ -25,6 +25,11 @@ body {
   margin-top: 30px;
 }
 
+#body {
+    background-color: #90bed1;
+    padding: 40px;
+}
+
 .form {
   font-size: 15px;
 }
