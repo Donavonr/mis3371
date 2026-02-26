@@ -22,7 +22,7 @@ body{
 
 #logo{
   position:absolute;
-  left: 0;
+  left: 15;
   top: 10px;
   width:70px;
   height:auto;
@@ -41,7 +41,7 @@ body{
 .header-date{
   position:absolute;
   right: 0;
-  bottom: 8px;
+  bottom: 10px;
   font-size:13px;
   font-weight:600;
   white-space: nowrap;
