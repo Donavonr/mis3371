@@ -147,23 +147,26 @@
     </tr>
        
     <tr class="form">
-        <td align="right">
-            <label for="city">City,</label>
-            <label for="state">ST</label>
-            <label for="zip">Zip</label>
-        </td>
-        <td>
-            <input type="text" 
-                    size="10" 
-                    maxlength="25" 
-                    id="city" 
-                    name="city" 
-                    required
-                    oninvalid="this.setCustomValidity('You forgot City')"
-                    oninput="this.setCustomValidity('')"
-                    placeholder="Anytown (req'd)"
-            >
-            <select id="state" name="state" required>
+  <td align="right">
+    City, ST Zip
+  </td>
+
+  <td class="cityrow">
+
+    <!-- CITY -->
+    <input type="text"
+           id="city"
+           name="city"
+           maxlength="30"
+           placeholder="Anytown (req'd)"
+           required
+           oninvalid="this.setCustomValidity('You forgot City')"
+           oninput="this.setCustomValidity('')">
+
+    <!-- STATE -->
+    <select id="state" name="state" required>
+      <option value=""></option>
+         <select id="state" name="state" required>
                 <option value=""></option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -228,10 +231,23 @@
                     oninput="this.setCustomValidity('')"
                     placeholder="00000"
             >
-            <span id="City_text"></span>
-            <span id="State_text"></span>
-            </td>
-        </tr>
+      <!-- keep your full state list here including DC + PR -->
+    </select>
+
+    <!-- ZIP -->
+    <input type="text"
+           id="zip"
+           name="zip"
+           maxlength="10"
+           pattern="[0-9]{5,10}"
+           placeholder="00000"
+           required
+           oninvalid="this.setCustomValidity('Zip required (5-10 digits)')"
+           oninput="this.setCustomValidity('')">
+
+  </td>
+</tr>
+          
     <tr class="form">
         <td align="right">
             <label for="phone">Phone #</label>
