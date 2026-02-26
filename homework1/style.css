@@ -8,8 +8,7 @@ body{
 
 /* ===== Header ===== */
 #header{
-  background:#2f7fb6;          /* darker header bar */
-  color:#000;
+  background:#2f7fb6;
   padding:14px 18px;
 }
 
@@ -17,14 +16,21 @@ body{
   width:75px;                  /* bigger logo */
   height:auto;
 }
+#header table{
+  width:100%;
+}
 
+#header table td{
+  vertical-align:middle;
+}
 #header table td:nth-child(2){
-  font-size:28px;              /* bigger clinic title */
-  font-weight:700;
   text-align:center;
+  font-size:32px;   /* slightly bigger */
+  font-weight:700;
 }
 
 #header table td:nth-child(3){
+  text-align:right;
   font-size:13px;
   font-weight:600;
 }
