@@ -39,8 +39,7 @@ table.form{
   margin: 0 auto;
   background:#bcd0ea;          /* lighter panel behind fields */
   padding:18px 22px;
-  border:2px solid #1b5f8a;    /* panel border */
-  border-radius:10px;
+  border:none;    /* panel border */
   border-collapse:separate;
   border-spacing:0 10px;
   width: 620px;
@@ -60,7 +59,7 @@ table.form td:first-child{
 /* ===== Boxed section headers ===== */
 th.form{
   background:#d9e6f6;
-  border:2px solid #1b5f8a;
+  border:none;
   padding:10px;
   font-size:18px;
   font-weight:700;
