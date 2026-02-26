@@ -13,24 +13,23 @@ body {
 }
 
 #logo {
-  width: 60px;
+  width: 45px;
   height: auto;
-  display: block;
 }
 
+/* middle “panel” area behind the form */
 #body {
-  padding: 40px;
-  display: flex;
-  justify-content: center;
+  background-color: #8bc2d9;   /* solid light blue */
+  padding: 30px 0;
 }
 
+/* the actual form table */
 table.form {
-  margin: 0 auto;
-  background: #eaf4ff;
-  padding: 20px 25px;
-  border-radius: 10px;
+  margin: 0 auto;             /* centers it */
+  background-color: #e6f2ff;   /* slightly lighter panel */
+  padding: 20px;
+  border-radius: 12px;
 }
-
 th.form {
   text-align: center;
   font-size: 18px;
@@ -70,4 +69,13 @@ input[type="reset"]:hover {
   text-align: center;
   padding: 20px;
   margin-top: 30px;
+}
+table.form td {
+  padding: 6px 10px;
+  vertical-align: middle;
+}
+
+table.form td:first-child {
+  text-align: right;
+  white-space: nowrap;
 }
