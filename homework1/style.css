@@ -13,13 +13,18 @@ body{
 }
 
 /* This centers header content to match form width */
-.header-inner {
-  width: 620px;       /* SAME as table.form width */
-  margin: 0 auto;     /* center it */
+.header-inner{
+  width: 620px;            /* match your form width */
+  margin: 0 auto;
+  position: relative;      /* allows bottom-right date */
+  min-height: 80px;        /* gives space for title + date */
 }
 
 #logo{
-  width:75px;                  /* bigger logo */
+  position:absolute;
+  left: 0;
+  top: 10px;
+  width:70px;
   height:auto;
 }
 #header table {
@@ -31,17 +36,22 @@ body{
 }
 
 /* Center clinic name */
-#header table td:nth-child(2){
+.header-title{
   text-align:center;
   font-size:32px;
   font-weight:700;
+  line-height: 1.1;
+  padding-top: 8px;
 }
 
 /* Keep date on right */
-#header table td:nth-child(3){
-  text-align:right;
+.header-date{
+  position:absolute;
+  right: 0;
+  bottom: 8px;
   font-size:13px;
   font-weight:600;
+  white-space: nowrap;
 }
 
 /* ===== Form Area ===== */
