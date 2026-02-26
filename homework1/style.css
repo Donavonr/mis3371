@@ -37,7 +37,7 @@ body{
 
 table.form{
   margin: 0 auto;
-  background:#bcd0ea;          /* lighter panel behind fields */
+  background:transparent;          /* lighter panel behind fields */
   padding:18px 22px;
   border:none;    /* panel border */
   border-collapse:separate;
@@ -58,7 +58,7 @@ table.form td:first-child{
 
 /* ===== Boxed section headers ===== */
 th.form{
-  background:#d9e6f6;
+  background:transparent;
   border:none;
   padding:10px;
   font-size:18px;
