@@ -7,28 +7,37 @@ body{
 }
 
 /* ===== Header ===== */
-#header{
+#header {
   background:#2f7fb6;
-  padding:14px 18px;
+  padding:14px 0;
+}
+
+/* This centers header content to match form width */
+.header-inner {
+  width: 620px;       /* SAME as table.form width */
+  margin: 0 auto;     /* center it */
 }
 
 #logo{
   width:75px;                  /* bigger logo */
   height:auto;
 }
-#header table{
+#header table {
   width:100%;
 }
 
-#header table td{
+#header table td {
   vertical-align:middle;
 }
+
+/* Center clinic name */
 #header table td:nth-child(2){
   text-align:center;
-  font-size:32px;   /* slightly bigger */
+  font-size:32px;
   font-weight:700;
 }
 
+/* Keep date on right */
 #header table td:nth-child(3){
   text-align:right;
   font-size:13px;
