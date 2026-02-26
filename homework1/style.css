@@ -27,13 +27,6 @@ body{
   width:70px;
   height:auto;
 }
-#header table {
-  width:100%;
-}
-
-#header table td {
-  vertical-align:middle;
-}
 
 /* Center clinic name */
 .header-title{
