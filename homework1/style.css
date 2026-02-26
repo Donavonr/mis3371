@@ -10,7 +10,8 @@ body{
 #header{
   background:#2f7fb6;
   padding:14px 0;
-  position: relative;
+  position: relative;   /* THIS IS REQUIRED */
+  min-height: 90px;     /* give space for date */
 }
 
 /* This centers header content to match form width */
