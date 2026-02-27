@@ -214,15 +214,16 @@
       <option value="WY">Wyoming</option>
     </select>
 
-    <input type="text"
-           id="zip"
-           name="zip"
-           maxlength="10"
-           pattern="[0-9]{5,10}"
-           placeholder="00000"
-           required
-           oninvalid="this.setCustomValidity('Zip required (5-10 digits)')"
-           oninput="this.setCustomValidity('')">
+    <input type="text" 
+                    pattern="[0-9]{5}"
+                    size="5"
+                    maxlength="5" 
+                    id="zip" 
+                    name="zip" 
+                    required
+                    oninvalid="this.setCustomValidity('5 Digit Zip/Postal Code required')"
+                    oninput="this.setCustomValidity('')"
+                    placeholder="00000"
 
     <span id="City_text"></span>
     <span id="State_text"></span>
