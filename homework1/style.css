@@ -2,33 +2,33 @@
 body{
   margin:0;
   font-family: Verdana, Geneva, sans-serif;
-  background:#7fb6d6;          /* light blue page background */
+  background:#7fb6d6;         
   color:#000;
 }
 
-/* ===== Header ===== */
+
 #header{
   background:#2f7fb6;
   padding:14px 0;
-  position: relative;   /* THIS IS REQUIRED */
-  min-height: 90px;     /* give space for date */
+  position: relative;   
+  min-height: 90px;     
 }
 
-/* This centers header content to match form width */
+
 .header-inner{
-  width: 620px;            /* match your form width */
+  width: 620px;            
   margin: 0 auto;
-  position: relative;      /* allows bottom-right date */
-  min-height: 80px;        /* gives space for title + date */
+  position: relative;      
+  min-height: 80px;       
 }
 
 #logo{
   position:absolute;
-  left:15px;      /* adjust if needed */
+  left:15px;      
   top:15px;
   width:90px;
 }
-/* Center clinic name */
+
 .header-title{
   text-align:center;
   font-size:32px;
@@ -37,27 +37,27 @@ body{
   padding-top: 8px;
 }
 
-/* Keep date on right */
+
 .header-date{
   position:absolute;
-  right:15px;     /* adjust if needed */
+  right:15px;    
   bottom:15px;
   font-size:13px;
   font-weight:600;
   white-space:nowrap;
 }
 
-/* ===== Form Area ===== */
+
 #body{
-  background:#7fb6d6;          /* same as page background */
+  background:#7fb6d6;         
   padding:18px 0 28px;
 }
 
 table.form{
   margin: 0 auto;
-  background:transparent;          /* lighter panel behind fields */
+  background:transparent;         
   padding:18px 22px;
-  border:none;    /* panel border */
+  border:none;    
   border-collapse:separate;
   border-spacing:0 10px;
   width: 620px;
@@ -74,7 +74,7 @@ table.form td:first-child{
   white-space: nowrap;
 }
 
-/* ===== Boxed section headers ===== */
+
 th.form{
   background:transparent;
   border:none;
@@ -84,7 +84,7 @@ th.form{
   text-align:center;
 }
 
-/* Inputs */
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -105,7 +105,7 @@ input[type="range"]{
   width: 180px;
 }
 
-/* ===== City/ST/Zip one-row layout ===== */
+
 td.cityrow{
   white-space: nowrap;
 }
@@ -123,7 +123,7 @@ td.cityrow #zip{
   width: 80px;
 }
 
-/* Buttons */
+
 input[type="submit"],
 input[type="reset"],
 button{
@@ -142,7 +142,7 @@ button:hover{
   background:#004080;
 }
 
-/* Footer */
+
 #footer{
   background:#2f7fb6;
   color:#fff;
