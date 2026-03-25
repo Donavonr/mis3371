@@ -66,3 +66,23 @@ function reviewForm() {
 
     document.getElementById("reviewSection").innerHTML = output;
 }
+function checkPasswords() {
+    let pw1 = document.getElementById("password").value;
+    let pw2 = document.getElementById("password2").value;
+    let msg = document.getElementById("passwordError");
+
+    if (pw2 === "") {
+        msg.innerHTML = "";
+        return true;
+    }
+
+    if (pw1 !== pw2) {
+        msg.innerHTML = "ERROR: Passwords do not match";
+        msg.style.color = "red";
+        return false;
+    } else {
+        msg.innerHTML = "Passwords match";
+        msg.style.color = "green";
+        return true;
+    }
+}
