@@ -46,9 +46,9 @@ function reviewForm() {
 
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
-
-        <p><strong>Address:</strong> ${addr1} ${addr2}, ${city}, ${state} ${zip}</p>
-
+        <p><strong>Address:</strong> ${addr1}</p>
+        <p>${addr2}</p>
+        <p>${city}, ${state} ${zip}</p>
         <p><strong>Sex:</strong> ${sex}</p>
         <p><strong>Insurance:</strong> ${insurance}</p>
         <p><strong>Vaccinated:</strong> ${vaccinated}</p>
