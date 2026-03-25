@@ -38,29 +38,31 @@ function reviewForm() {
     }
 
     let output = `
-        <h2>PLEASE REVIEW THIS INFORMATION</h2>
+    <h2>PLEASE REVIEW THIS INFORMATION</h2>
 
-        <p><strong>Name:</strong> ${firstName} ${middleInit} ${lastName}</p>
-        <p><strong>Date of Birth:</strong> ${dob}</p>
-        <p><strong>Social Security:</strong> ${ssn}</p>
+    <p><strong>Name:</strong> ${firstName} ${middleInit} ${lastName}</p>
+    <p><strong>Date of Birth:</strong> ${dob}</p>
+    <p><strong>Social Security:</strong> ${ssn}</p>
 
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Address:</strong> ${addr1}</p>
-        <p>${addr2}</p>
-        <p>${city}, ${state} ${zip}</p>
-        <p><strong>Sex:</strong> ${sex}</p>
-        <p><strong>Insurance:</strong> ${insurance}</p>
-        <p><strong>Vaccinated:</strong> ${vaccinated}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Phone:</strong> ${phone}</p>
 
-        <p><strong>Conditions:</strong> ${conditionsList.join(", ")}</p>
+    <p><strong>Address:</strong> ${addr1}</p>
+    ${addressLine2}
+    <p>${city}, ${state} ${zip}</p>
 
-        <p><strong>Reason for Visit:</strong> ${reason}</p>
-        <p><strong>Overall Health Rating:</strong> ${healthRating}</p>
+    <p><strong>Sex:</strong> ${sex}</p>
+    <p><strong>Insurance:</strong> ${insurance}</p>
+    <p><strong>Vaccinated:</strong> ${vaccinated}</p>
 
-        <p><strong>User ID:</strong> ${userId}</p>
-        <p><strong>Password:</strong> ${password}</p>
-    `;
+    <p><strong>Conditions:</strong> ${conditionsList.join(", ")}</p>
+
+    <p><strong>Reason for Visit:</strong> ${reason}</p>
+    <p><strong>Overall Health Rating:</strong> ${healthRating}</p>
+
+    <p><strong>User ID:</strong> ${userId}</p>
+    <p><strong>Password:</strong> ${password}</p>
+`;
 
     document.getElementById("reviewSection").innerHTML = output;
 }
