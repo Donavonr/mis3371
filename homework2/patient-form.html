@@ -332,15 +332,15 @@
   </td>
   <td>
     <input type="text"
-       id="userId"
-       name="userId"
-       minlength="5"
-       maxlength="30"
-       pattern="^[a-zA-Z][a-zA-Z0-9_-]{4,29}$"
-       required
-       title="5 to 30 characters, must start with a letter, letters numbers underscore or dash only, no spaces"
-       placeholder="(5-30 chars)"
-       oninput="this.value = this.value.toLowerCase()">
+           id="userId"
+           name="userId"
+           minlength="5"
+           maxlength="30"
+           pattern="^[A-Za-z][A-Za-z0-9_-]{4,29}$"
+           required
+           title="5 to 30 characters, must start with a letter, no spaces, letters numbers underscore or dash only"
+           placeholder="(5-30 chars)"
+           oninput="this.value = this.value.toLowerCase()">
   </td>
 </tr>
 
