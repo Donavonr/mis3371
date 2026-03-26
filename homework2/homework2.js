@@ -16,7 +16,9 @@ function reviewForm() {
     let email = document.getElementsByName("email")[0].value.trim();
     let reason = document.getElementsByName("reason")[0].value.trim();
     let healthRating = document.getElementsByName("healthRating")[0].value;
-    let userId = document.getElementsByName("userId")[0].value.trim();
+    let userIdField = document.getElementsByName("userId")[0];
+    let userId = userIdField.value.trim().toLowerCase();
+    userIdField.value = userId;
     let password = document.getElementsByName("password")[0].value;
     let password2 = document.getElementsByName("password2")[0].value;
 
