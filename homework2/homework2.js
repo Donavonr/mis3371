@@ -186,3 +186,6 @@ function checkPasswords() {
         return true;
     }
 }
+window.onload = function() {
+    updateSliderValue();
+};
