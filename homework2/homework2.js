@@ -50,19 +50,39 @@ function reviewForm() {
 
     // DOB check
     let dobStatus = "pass";
-    let dobColor = "limegreen";
-    if (dob === "") {
-        dobStatus = "ERROR: Missing DOB";
+let dobColor = "limegreen";
+
+if (dob === "") {
+    dobStatus = "ERROR: Missing DOB";
+    dobColor = "red";
+} else {
+    let parts = dob.split("/");
+
+    if (parts.length !== 3) {
+        dobStatus = "ERROR: Invalid DOB format";
         dobColor = "red";
     } else {
+        let month = parseInt(parts[0], 10);
+        let day = parseInt(parts[1], 10);
+        let year = parseInt(parts[2], 10);
+
+        let dobDate = new Date(year, month - 1, day);
         let today = new Date();
-        let dobDate = new Date(dob);
         today.setHours(0, 0, 0, 0);
+
+        let minDate = new Date();
+        minDate.setHours(0, 0, 0, 0);
+        minDate.setFullYear(minDate.getFullYear() - 120);
+
         if (dobDate > today) {
             dobStatus = "ERROR: Cannot be in the future";
             dobColor = "red";
+        } else if (dobDate < minDate) {
+            dobStatus = "ERROR: Cannot be over 120 years old";
+            dobColor = "red";
         }
     }
+}
 
     // Email check
     let emailStatus = "pass";
