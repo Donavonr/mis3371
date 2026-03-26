@@ -296,13 +296,20 @@
         placeholder="Describe your symptoms..."></textarea>
 </td>
 </tr>
-  <tr class="form">
-      <td align="right">
-        <label for="healthRating">Overall Health Rating</label>
-      </td>
-      <td>
-            <input type="range" id="healthRating" name="healthRating" min="1" max="10" value="5">
-            <span>1 - 10</span>
+  <tr>
+  <td align="right">
+    <label for="healthRating">Overall Health Rating</label>
+  </td>
+  <td>
+    <input type="range"
+           id="healthRating"
+           name="healthRating"
+           min="1"
+           max="10"
+           value="5"
+           oninput="updateSliderValue()">
+
+    <div id="sliderValue">5</div>
   </td>
 </tr>
        <!-- Portal account creation section-->
