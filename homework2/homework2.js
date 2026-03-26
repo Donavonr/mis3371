@@ -154,7 +154,7 @@ if (password === "" || password2 === "") {
     passwordStatus = "ERROR: Password cannot contain part of User ID";
     passwordColor = "red";
 }
-    let output = `
+   let output = `
     <h2>PLEASE REVIEW THIS INFORMATION</h2>
 
     <p>
@@ -195,14 +195,20 @@ if (password === "" || password2 === "") {
     <p><strong>Conditions:</strong> ${conditionsList.join(", ")}</p>
     <p><strong>Reason for Visit:</strong> ${reason}</p>
     <p><strong>Overall Health Rating:</strong> ${healthRating}</p>
+
     <p>
-    <strong>User ID:</strong> ${userId}
-    <span style="color:${userIdColor}; margin-left:20px;"><strong>${userIdStatus}</strong></span>
-</p>
+        <strong>User ID:</strong> ${userId}
+        <span style="color:${userIdColor}; margin-left:20px;"><strong>${userIdStatus}</strong></span>
+    </p>
+
+    <p>
+        <strong>Password:</strong> ********
+        <span style="color:${passwordColor}; margin-left:20px;"><strong>${passwordStatus}</strong></span>
+    </p>
+    `;
 
     document.getElementById("reviewSection").innerHTML = output;
 }
-
 function updateSliderValue() {
     let slider = document.getElementById("healthRating");
     let display = document.getElementById("sliderValue");
