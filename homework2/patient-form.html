@@ -214,16 +214,17 @@
       <option value="WY">Wyoming</option>
     </select>
 
-    <input type="text" 
-                    pattern="[0-9]{5}"
-                    size="5"
-                    maxlength="5" 
-                    id="zip" 
-                    name="zip" 
-                    required
-                    oninvalid="this.setCustomValidity('5 Digit Zip/Postal Code required')"
-                    oninput="this.setCustomValidity('')"
-                    placeholder="00000">
+    <input type="text"
+       pattern="^[0-9]{5}(-[0-9]{4})?$"
+       size="10"
+       maxlength="10"
+       id="zip"
+       name="zip"
+       required
+       title="Enter 5-digit ZIP or ZIP+4 format like 77002-1234"
+       oninvalid="this.setCustomValidity('ZIP must be 5 digits or ZIP+4')"
+       oninput="this.setCustomValidity('')"
+       placeholder="00000 or 00000-0000">
 
     <span id="City_text"></span>
     <span id="State_text"></span>
