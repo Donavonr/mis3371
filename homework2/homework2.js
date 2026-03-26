@@ -195,13 +195,10 @@ if (password === "" || password2 === "") {
     <p><strong>Conditions:</strong> ${conditionsList.join(", ")}</p>
     <p><strong>Reason for Visit:</strong> ${reason}</p>
     <p><strong>Overall Health Rating:</strong> ${healthRating}</p>
-    <p><strong>User ID:</strong> ${userId}</p>
-
     <p>
-        <strong>Password:</strong> ********
-        <span style="color:${passwordColor}; margin-left:20px;"><strong>${passwordStatus}</strong></span>
-    </p>
-    `;
+    <strong>User ID:</strong> ${userId}
+    <span style="color:${userIdColor}; margin-left:20px;"><strong>${userIdStatus}</strong></span>
+</p>
 
     document.getElementById("reviewSection").innerHTML = output;
 }
