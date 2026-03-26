@@ -122,16 +122,30 @@ if (dob === "") {
     }
 
     // Password check
-    let passwordStatus = "pass";
-    let passwordColor = "limegreen";
-    if (password === "" || password2 === "") {
-        passwordStatus = "ERROR: Missing password";
-        passwordColor = "red";
-    } else if (password !== password2) {
-        passwordStatus = "ERROR: Passwords do not match";
-        passwordColor = "red";
-    }
+   let passwordStatus = "pass";
+let passwordColor = "limegreen";
 
+let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*_\-+=.?]).{8,30}$/;
+
+if (password === "" || password2 === "") {
+    passwordStatus = "ERROR: Missing password";
+    passwordColor = "red";
+} else if (!passwordPattern.test(password)) {
+    passwordStatus = "ERROR: Must include upper, lower, number, and special char";
+    passwordColor = "red";
+} else if (password.includes('"') || password.includes("'")) {
+    passwordStatus = "ERROR: Password cannot contain quotes";
+    passwordColor = "red";
+} else if (password !== password2) {
+    passwordStatus = "ERROR: Passwords do not match";
+    passwordColor = "red";
+} else if (password.toLowerCase() === userId.toLowerCase()) {
+    passwordStatus = "ERROR: Password cannot equal User ID";
+    passwordColor = "red";
+} else if (userId.length >= 3 && password.toLowerCase().includes(userId.toLowerCase().substring(0, 3))) {
+    passwordStatus = "ERROR: Password cannot contain part of User ID";
+    passwordColor = "red";
+}
     let output = `
     <h2>PLEASE REVIEW THIS INFORMATION</h2>
 
