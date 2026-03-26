@@ -165,23 +165,17 @@ function reviewForm() {
 function checkPasswords() {
     let pw1 = document.getElementById("password").value;
     let pw2 = document.getElementById("password2").value;
-    let msg = document.getElementById("passwordError");
     let pw2Field = document.getElementById("password2");
 
     if (pw2 === "") {
-        msg.innerHTML = "";
         pw2Field.setCustomValidity("");
         return true;
     }
 
     if (pw1 !== pw2) {
-        msg.innerHTML = "ERROR: Passwords do not match";
-        msg.style.color = "red";
         pw2Field.setCustomValidity("Passwords do not match");
         return false;
     } else {
-        msg.innerHTML = "Passwords match";
-        msg.style.color = "green";
         pw2Field.setCustomValidity("");
         return true;
     }
