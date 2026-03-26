@@ -162,6 +162,12 @@ function reviewForm() {
     document.getElementById("reviewSection").innerHTML = output;
 }
 
+function updateSliderValue() {
+    let slider = document.getElementById("healthRating");
+    let display = document.getElementById("sliderValue");
+
+    display.innerHTML = slider.value;
+}
 function checkPasswords() {
     let pw1 = document.getElementById("password").value;
     let pw2 = document.getElementById("password2").value;
