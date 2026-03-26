@@ -120,7 +120,16 @@ if (dob === "") {
         ssnStatus = "ERROR: Invalid SSN";
         ssnColor = "red";
     }
+    // USER ID CHECK
+    let userIdStatus = "pass";
+    let userIdColor = "limegreen";
 
+    let userIdPattern = /^[a-zA-Z][a-zA-Z0-9_-]{4,29}$/;
+    
+    if (!userIdPattern.test(userId)) {
+        userIdStatus = "ERROR: Must start with a letter, 5–30 chars, no spaces";
+        userIdColor = "red";
+    }
     // Password check
    let passwordStatus = "pass";
 let passwordColor = "limegreen";
