@@ -107,7 +107,7 @@ if (dob === "") {
     // Address check
     let addressStatus = "pass";
     let addressColor = "limegreen";
-    if (addr1 === "" || city === "" || state === "" || !/^[0-9]{5}$/.test(zip)) {
+    if (addr1 === "" || city === "" || state === "" || !/^[0-9]{5}(-[0-9]{4})?$/.test(zip)) {
         addressStatus = "ERROR: Missing address info or bad ZIP";
         addressColor = "red";
     }
