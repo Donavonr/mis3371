@@ -9,7 +9,6 @@ function reviewForm() {
     let ssn = document.getElementsByName("ssn")[0].value;
     let addr1 = document.getElementsByName("addr1")[0].value;
     let addr2 = document.getElementsByName("addr2")[0].value;
-    let addressLine2 = addr2 ? `<p>${addr2}</p>` : "";
     let city = document.getElementsByName("city")[0].value;
     let state = document.getElementsByName("state")[0].value;
     let zip = document.getElementsByName("zip")[0].value;
