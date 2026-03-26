@@ -1,5 +1,6 @@
 document.getElementById("today").innerHTML =
     new Date().toLocaleDateString();
+
 function reviewForm() {
     let firstName = document.getElementsByName("firstname")[0].value;
     let middleInit = document.getElementsByName("middleinit")[0].value;
@@ -8,6 +9,7 @@ function reviewForm() {
     let ssn = document.getElementsByName("ssn")[0].value;
     let addr1 = document.getElementsByName("addr1")[0].value;
     let addr2 = document.getElementsByName("addr2")[0].value;
+    let addressLine2 = addr2 ? `<p>${addr2}</p>` : "";
     let city = document.getElementsByName("city")[0].value;
     let state = document.getElementsByName("state")[0].value;
     let zip = document.getElementsByName("zip")[0].value;
@@ -62,10 +64,11 @@ function reviewForm() {
 
     <p><strong>User ID:</strong> ${userId}</p>
     <p><strong>Password:</strong> ${password}</p>
-`;
+    `;
 
     document.getElementById("reviewSection").innerHTML = output;
 }
+
 function checkPasswords() {
     let pw1 = document.getElementById("password").value;
     let pw2 = document.getElementById("password2").value;
