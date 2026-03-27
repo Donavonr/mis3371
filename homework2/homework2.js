@@ -217,7 +217,7 @@ function checkPasswords() {
     let pw2Field = document.getElementById("password2");
     let msg = document.getElementById("passwordMessage");
 
-    let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*_\-+=.?]).{8,30}$/;
+    let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+\\\/><.,`~?]).{8,30}$/;
 
     if (pw1 === "" && pw2 === "") {
         msg.innerHTML = "";
@@ -247,7 +247,7 @@ function checkPasswords() {
     }
 
     if (pw2 === "") {
-        msg.innerHTML = "Please re-enter password.";
+        msg.innerHTML = "Re-enter password to check if they match.";
         msg.style.color = "red";
         pw2Field.setCustomValidity("Please re-enter password");
         return false;
