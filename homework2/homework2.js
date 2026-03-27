@@ -195,9 +195,11 @@ if (password === "" || password2 === "") {
     </p>
 
     <p>
-        <strong>Password:</strong> ********
-        <span style="color:${passwordColor}; margin-left:20px;"><strong>${passwordStatus}</strong></span>
-    </p>
+    <strong>Password:</strong> ********
+    <span style="color:${passwordColor}; margin-left:20px;">
+        <strong>${passwordStatus}</strong>
+    </span>
+</p>
     `;
 
     document.getElementById("reviewSection").innerHTML = output;
