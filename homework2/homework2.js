@@ -42,34 +42,23 @@ function reviewForm() {
 
     let addressLine2 = addr2 ? `<p>${addr2}</p>` : "";
 
-   // First Name check
-let namePattern = /^[A-Za-z'-]{1,30}$/;
-let firstNameStatus = "pass";
-let firstNameColor = "limegreen";
+ // Name check
+let nameStatus = "pass";
+let nameColor = "limegreen";
 
-if (!namePattern.test(firstName)) {
-    firstNameStatus = "ERROR: Letters, apostrophes, and dashes only (1-30 chars)";
-    firstNameColor = "red";
-}
-
-// Middle Initial check
-let middleInitStatus = "pass";
-let middleInitColor = "limegreen";
+let firstNamePattern = /^[A-Za-z'-]{1,30}$/;
 let middleInitPattern = /^[A-Za-z]?$/;
-
-if (!middleInitPattern.test(middleInit)) {
-    middleInitStatus = "ERROR: Must be blank or 1 letter only";
-    middleInitColor = "red";
-}
-
-// Last Name check
-let lastNameStatus = "pass";
-let lastNameColor = "limegreen";
 let lastNamePattern = /^[A-Za-z'2345-]{1,30}$/;
 
-if (!lastNamePattern.test(lastName)) {
-    lastNameStatus = "ERROR: Letters, apostrophes, dashes, and numbers 2-5 only (1-30 chars)";
-    lastNameColor = "red";
+if (!firstNamePattern.test(firstName)) {
+    nameStatus = "ERROR: First name must be 1-30 letters, apostrophes, or dashes only";
+    nameColor = "red";
+} else if (!middleInitPattern.test(middleInit)) {
+    nameStatus = "ERROR: Middle initial must be blank or 1 letter only";
+    nameColor = "red";
+} else if (!lastNamePattern.test(lastName)) {
+    nameStatus = "ERROR: Last name must be 1-30 chars using letters, apostrophes, dashes, and numbers 2-5 only";
+    nameColor = "red";
 }
 
     // DOB check
