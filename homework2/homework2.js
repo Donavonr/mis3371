@@ -42,13 +42,35 @@ function reviewForm() {
 
     let addressLine2 = addr2 ? `<p>${addr2}</p>` : "";
 
-    // Name check
-    let nameStatus = "pass";
-    let nameColor = "limegreen";
-    if (firstName === "" || lastName === "") {
-        nameStatus = "ERROR: Missing first or last name";
-        nameColor = "red";
-    }
+   // First Name check
+let namePattern = /^[A-Za-z'-]{1,30}$/;
+let firstNameStatus = "pass";
+let firstNameColor = "limegreen";
+
+if (!namePattern.test(firstName)) {
+    firstNameStatus = "ERROR: Letters, apostrophes, and dashes only (1-30 chars)";
+    firstNameColor = "red";
+}
+
+// Middle Initial check
+let middleInitStatus = "pass";
+let middleInitColor = "limegreen";
+let middleInitPattern = /^[A-Za-z]?$/;
+
+if (!middleInitPattern.test(middleInit)) {
+    middleInitStatus = "ERROR: Must be blank or 1 letter only";
+    middleInitColor = "red";
+}
+
+// Last Name check
+let lastNameStatus = "pass";
+let lastNameColor = "limegreen";
+let lastNamePattern = /^[A-Za-z'2345-]{1,30}$/;
+
+if (!lastNamePattern.test(lastName)) {
+    lastNameStatus = "ERROR: Letters, apostrophes, dashes, and numbers 2-5 only (1-30 chars)";
+    lastNameColor = "red";
+}
 
     // DOB check
     let dobStatus = "pass";
