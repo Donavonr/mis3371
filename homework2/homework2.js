@@ -211,22 +211,59 @@ function updateSliderValue() {
     display.innerHTML = slider.value;
 }
 function checkPasswords() {
+    let userId = document.getElementById("userId").value.trim().toLowerCase();
     let pw1 = document.getElementById("password").value;
     let pw2 = document.getElementById("password2").value;
     let pw2Field = document.getElementById("password2");
+    let msg = document.getElementById("passwordMessage");
 
-    if (pw2 === "") {
+    let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*_\-+=.?]).{8,30}$/;
+
+    if (pw1 === "" && pw2 === "") {
+        msg.innerHTML = "";
         pw2Field.setCustomValidity("");
         return true;
+    }
+
+    if (pw1 !== "" && !passwordPattern.test(pw1)) {
+        msg.innerHTML = "Password must include uppercase, lowercase, number, and special character.";
+        msg.style.color = "red";
+        pw2Field.setCustomValidity("Invalid password format");
+        return false;
+    }
+
+    if (pw1.includes('"') || pw1.includes("'")) {
+        msg.innerHTML = "Password cannot contain quotes.";
+        msg.style.color = "red";
+        pw2Field.setCustomValidity("Password cannot contain quotes");
+        return false;
+    }
+
+    if (userId !== "" && pw1.toLowerCase() === userId) {
+        msg.innerHTML = "Password cannot be the same as User ID.";
+        msg.style.color = "red";
+        pw2Field.setCustomValidity("Password cannot equal User ID");
+        return false;
+    }
+
+    if (pw2 === "") {
+        msg.innerHTML = "Please re-enter password.";
+        msg.style.color = "red";
+        pw2Field.setCustomValidity("Please re-enter password");
+        return false;
     }
 
     if (pw1 !== pw2) {
+        msg.innerHTML = "Passwords do not match.";
+        msg.style.color = "red";
         pw2Field.setCustomValidity("Passwords do not match");
         return false;
-    } else {
-        pw2Field.setCustomValidity("");
-        return true;
     }
+
+    msg.innerHTML = "Passwords match.";
+    msg.style.color = "green";
+    pw2Field.setCustomValidity("");
+    return true;
 }
 window.onload = function() {
     updateSliderValue();
