@@ -172,11 +172,26 @@ if (password === "" || password2 === "") {
    let output = `
     <h2>PLEASE REVIEW THIS INFORMATION</h2>
 
-    <p>
-        <strong>Name:</strong> ${firstName} ${middleInit} ${lastName}
-        <span style="color:${nameColor}; margin-left:20px;"><strong>${nameStatus}</strong></span>
-    </p>
+   <p>
+    <strong>First Name:</strong> ${firstName}
+    <span style="color:${firstNameColor}; margin-left:20px;">
+        <strong>${firstNameStatus}</strong>
+    </span>
+</p>
 
+<p>
+    <strong>Middle Initial:</strong> ${middleInit}
+    <span style="color:${middleInitColor}; margin-left:20px;">
+        <strong>${middleInitStatus}</strong>
+    </span>
+</p>
+
+<p>
+    <strong>Last Name:</strong> ${lastName}
+    <span style="color:${lastNameColor}; margin-left:20px;">
+        <strong>${lastNameStatus}</strong>
+    </span>
+</p>
     <p>
         <strong>Date of Birth:</strong> ${dob}
         <span style="color:${dobColor}; margin-left:20px;"><strong>${dobStatus}</strong></span>
