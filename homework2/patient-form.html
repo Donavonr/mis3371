@@ -332,15 +332,15 @@
   </td>
   <td>
     <input type="text"
-           id="userId"
-           name="userId"
-           minlength="5"
-           maxlength="30"
-           pattern="^[A-Za-z][A-Za-z0-9_-]{4,29}$"
-           required
-           title="5 to 30 characters, must start with a letter, no spaces, letters numbers underscore or dash only"
-           placeholder="(5-30 chars)"
-           oninput="this.value = this.value.toLowerCase()">
+       id="userId"
+       name="userId"
+       minlength="5"
+       maxlength="30"
+       pattern="^[A-Za-z][A-Za-z0-9_-]{4,29}$"
+       required
+       title="5 to 30 characters, must start with a letter, no spaces, letters numbers underscore or dash only"
+       placeholder="(5-30 chars)"
+       oninput="this.value = this.value.toLowerCase(); checkPasswords();">
   </td>
 </tr>
 
@@ -363,6 +363,23 @@
 
 <tr class="form">
   <td align="right">
+    <label for="password">Password</label>
+  </td>
+  <td>
+    <input type="password"
+           id="password"
+           name="password"
+           minlength="8"
+           maxlength="30"
+           required
+           placeholder="(req'd)"
+           title="8–30 characters, must include uppercase, lowercase, number, and special character"
+           oninput="checkPasswords()">
+  </td>
+</tr>
+
+<tr class="form">
+  <td align="right">
     <label for="password2">Re-enter Password</label>
   </td>
   <td>
@@ -374,7 +391,7 @@
            required
            placeholder="(req'd)"
            title="Re-enter the same password"
-           onkeyup="checkPasswords()">
+           oninput="checkPasswords()">
     <br>
     <span id="passwordMessage"></span>
   </td>
