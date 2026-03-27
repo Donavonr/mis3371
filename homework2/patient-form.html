@@ -42,12 +42,14 @@
         <label for="firstname">First Name</label>
     </td>
     <td>
-        <input type="text"
+      <input type="text"
        id="firstname"
        name="firstname"
+       minlength="1"
        maxlength="30"
+       pattern="^[A-Za-z'-]{1,30}$"
        required
-       title="Enter 1 to 30 letters, apostrophes, or dashes only">
+       title="1 to 30 characters. Letters, apostrophes, and dashes only.">
                
     </td>
 </tr>
@@ -57,11 +59,12 @@
         <label for="middleinit">Middle Initial</label>
         </td>
         <td>
-               <input type="text"
+              <input type="text"
        id="middleinit"
        name="middleinit"
        maxlength="1"
-       title="Enter one letter only">
+       pattern="^[A-Za-z]?$"
+       title="Optional. One letter only. No numbers.">
     </td>
 </tr>
 
@@ -73,9 +76,11 @@
         <input type="text"
        id="lastname"
        name="lastname"
+       minlength="1"
        maxlength="30"
+       pattern="^[A-Za-z'2345-]{1,30}$"
        required
-       title="Enter 1 to 30 characters. Letters, apostrophes, dashes, and numbers 2 to 5 only">
+       title="1 to 30 characters. Letters, apostrophes, dashes, and numbers 2 to 5 only.">
     </td>
 </tr>
        <!-- Sex Radio buttons row -->
