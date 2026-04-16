@@ -278,6 +278,35 @@ function checkPasswords() {
     pw2Field.setCustomValidity("");
     return true;
 }
+function validateForm() {
+    let valid = true;
+
+    if (!validateFirstName()) valid = false;
+    if (!validateMiddleInitial()) valid = false;
+    if (!validateLastName()) valid = false;
+    if (!validateDOB()) valid = false;
+    if (!validateSSN()) valid = false;
+    if (!validateAddress1()) valid = false;
+    if (!validateCity()) valid = false;
+    if (!validateState()) valid = false;
+    if (!validateZip()) valid = false;
+    if (!validateEmail()) valid = false;
+    if (!validateUserId()) valid = false;
+    if (!validatePasswordRules()) valid = false;
+    if (!validatePasswordMatch()) valid = false;
+
+    if (valid) {
+        document.getElementById("submitButton").style.display = "inline-block";
+    } else {
+        document.getElementById("submitButton").style.display = "none";
+    }
+
+    return valid;
+}
+
+window.onload = function() {
+    updateSliderValue();
+};
 window.onload = function() {
     updateSliderValue();
 };
