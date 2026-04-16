@@ -1,1 +1,150 @@
+body{
+  margin:0;
+  font-family: Verdana, Geneva, sans-serif;
+  background:#7fb6d6;         
+  color:#000;
+}
 
+
+#header{
+  background:#2f7fb6;
+  padding:14px 0;
+  position: relative;   
+  min-height: 90px;     
+}
+
+
+.header-inner{
+  width: 620px;            
+  margin: 0 auto;
+  position: relative;      
+  min-height: 80px;       
+}
+
+#logo{
+  position:absolute;
+  left:15px;      
+  top:15px;
+  width:90px;
+}
+
+.header-title{
+  text-align:center;
+  font-size:32px;
+  font-weight:700;
+  line-height: 1.1;
+  padding-top: 8px;
+}
+
+
+.header-date{
+  position:absolute;
+  right:15px;    
+  bottom:15px;
+  font-size:13px;
+  font-weight:600;
+  white-space:nowrap;
+}
+
+
+#body{
+  background:#7fb6d6;         
+  padding:18px 0 28px;
+}
+
+table.form{
+  margin: 0 auto;
+  background:transparent;         
+  padding:18px 22px;
+  border:none;    
+  border-collapse:separate;
+  border-spacing:0 10px;
+  width: 620px;
+}
+
+table.form td{
+  padding: 2px 10px;
+  vertical-align: middle;
+}
+
+table.form td:first-child{
+  text-align:right;
+  width: 220px;
+  white-space: nowrap;
+}
+
+
+th.form{
+  background:transparent;
+  border:none;
+  padding:10px;
+  font-size:18px;
+  font-weight:700;
+  text-align:center;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea{
+  border:1px solid #333;
+  padding:6px 8px;
+  border-radius:3px;
+  background:#fff;
+  width: 220px;
+}
+
+textarea{
+  width: 280px;
+}
+
+input[type="range"]{
+  width: 180px;
+}
+
+
+td.cityrow{
+  white-space: nowrap;
+}
+
+td.cityrow #city{
+  width: 180px;
+}
+
+td.cityrow #state{
+  width: 120px;
+  margin: 0 8px;
+}
+
+td.cityrow #zip{
+  width: 80px;
+}
+
+
+input[type="submit"],
+input[type="reset"],
+button{
+  background:#2c6faa;
+  color:#fff;
+  padding:8px 16px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  border-radius:4px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover{
+  background:#004080;
+}
+
+
+#footer{
+  background:#2f7fb6;
+  color:#fff;
+  text-align:center;
+  padding:18px 10px;
+}
