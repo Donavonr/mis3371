@@ -439,6 +439,27 @@ function validateUserId() {
     msg.style.color = "green";
     return true;
 }
+function validatePhone() {
+    let value = document.getElementById("phone").value.trim();
+    let msg = document.getElementById("phoneError");
+    let pattern = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
+
+    if (value === "") {
+        msg.innerHTML = "Phone number is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (!pattern.test(value)) {
+        msg.innerHTML = "Use format 000-000-0000.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
 
 window.onload = function() {
     updateSliderValue();
