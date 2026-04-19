@@ -288,9 +288,9 @@ function validateForm() {
     if (!validateSSN()) valid = false;
     if (!validateAddress1()) valid = false;
     if (!validateCity()) valid = false;
-    if (!validateState()) valid = false;
     if (!validateZip()) valid = false;
     if (!validateEmail()) valid = false;
+    if (!validatePhone()) valid = false;
     if (!validateUserId()) valid = false;
     if (!validatePasswordRules()) valid = false;
     if (!validatePasswordMatch()) valid = false;
