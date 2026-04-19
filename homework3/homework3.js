@@ -587,6 +587,4 @@ function validateCity() {
 window.onload = function() {
     updateSliderValue();
 };
-window.onload = function() {
-    updateSliderValue();
-};
+
