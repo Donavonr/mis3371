@@ -460,6 +460,129 @@ function validatePhone() {
     msg.style.color = "green";
     return true;
 }
+function validateDOB() {
+    let value = document.getElementById("dob").value.trim();
+    let msg = document.getElementById("dobError");
+    let pattern = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$/;
+
+    if (value === "") {
+        msg.innerHTML = "DOB is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (!pattern.test(value)) {
+        msg.innerHTML = "Use MM/DD/YYYY format.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    let parts = value.split("/");
+    let month = parseInt(parts[0], 10);
+    let day = parseInt(parts[1], 10);
+    let year = parseInt(parts[2], 10);
+
+    let dobDate = new Date(year, month - 1, day);
+    let today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    let minDate = new Date();
+    minDate.setHours(0, 0, 0, 0);
+    minDate.setFullYear(minDate.getFullYear() - 120);
+
+    if (dobDate > today) {
+        msg.innerHTML = "DOB cannot be in the future.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (dobDate < minDate) {
+        msg.innerHTML = "DOB cannot be more than 120 years ago.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
+
+function formatSSN() {
+    let field = document.getElementById("ssn");
+    let digits = field.value.replace(/\D/g, "").substring(0, 9);
+
+    if (digits.length > 5) {
+        field.value = digits.substring(0, 3) + "-" + digits.substring(3, 5) + "-" + digits.substring(5);
+    } else if (digits.length > 3) {
+        field.value = digits.substring(0, 3) + "-" + digits.substring(3);
+    } else {
+        field.value = digits;
+    }
+}
+
+function validateSSN() {
+    let value = document.getElementById("ssn").value.trim();
+    let msg = document.getElementById("ssnError");
+    let pattern = /^[0-9]{3}-[0-9]{2}-[0-9]{4}$/;
+
+    if (value === "") {
+        msg.innerHTML = "SSN is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (!pattern.test(value)) {
+        msg.innerHTML = "Use format 123-45-6789.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
+
+function validateAddress1() {
+    let value = document.getElementById("addr1").value.trim();
+    let msg = document.getElementById("addr1Error");
+
+    if (value === "") {
+        msg.innerHTML = "Address Line 1 is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (value.length < 2 || value.length > 30) {
+        msg.innerHTML = "Address Line 1 must be 2 to 30 characters.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
+
+function validateCity() {
+    let value = document.getElementById("city").value.trim();
+    let msg = document.getElementById("cityError");
+
+    if (value === "") {
+        msg.innerHTML = "City is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (value.length < 2 || value.length > 30) {
+        msg.innerHTML = "City must be 2 to 30 characters.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
 
 window.onload = function() {
     updateSliderValue();
