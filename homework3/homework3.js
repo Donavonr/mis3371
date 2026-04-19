@@ -58,7 +58,7 @@ if (!firstNamePattern.test(firstName)) {
     nameStatus = "ERROR: Middle initial must be blank or 1 letter only";
     nameColor = "red";
 } else if (!lastNamePattern.test(lastName)) {
-    nameStatus = "ERROR: Last name must be 1-30 chars using letters, apostrophes, dashes, and numbers 2-5 only";
+    nameStatus = "ERROR: Last name must be 1-30 chars using letters, apostrophes, dashes";
     nameColor = "red";
 }
 
