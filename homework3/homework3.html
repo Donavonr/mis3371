@@ -66,7 +66,10 @@
        name="middleinit"
        maxlength="1"
        pattern="^[A-Za-z]?$"
-       title="Optional. One letter only. No numbers.">
+       title="Optional. One letter only. No numbers."
+        oninput="validateMiddleInitial()">
+<br>
+<span id="middleinitError"></span>>
     </td>
 </tr>
 
@@ -82,7 +85,10 @@
        maxlength="30"
        pattern="^[A-Za-z'2345-]{1,30}$"
        required
-       title="1 to 30 characters. Letters, apostrophes, dashes, and numbers 2 to 5 only.">
+       title="1 to 30 characters. Letters, apostrophes, dashes, and numbers 2 to 5 only."
+       oninput="validateLastName()">
+<br>
+<span id="lastnameError"></span>>
     </td>
 </tr>
        <!-- Sex Radio buttons row -->
@@ -237,9 +243,11 @@
        name="zip"
        required
        title="Enter 5-digit ZIP or ZIP+4 format like 77002-1234"
-       oninvalid="this.setCustomValidity('ZIP must be 5 digits or ZIP+4')"
-       oninput="this.setCustomValidity('')"
-       placeholder="00000 or 00000-0000">
+       oninvalid="this.setCustomValidity('ZIP must be 5 digits')"
+      oninput="validateZip()"
+       placeholder="00000">
+<br>
+<span id="zipError"></span>
 
     <span id="City_text"></span>
     <span id="State_text"></span>
@@ -272,7 +280,10 @@
                id="email"
                name="email"
                placeholder="name@domain.tld"
-               required>
+               required
+                oninput="validateEmail()">
+<br>
+<span id="emailError"></span>>
   </td>
 </tr>
         <tr class="form">
@@ -346,8 +357,10 @@
            pattern="^[A-Za-z][A-Za-z0-9_-]{4,29}$"
            required
            title="5 to 30 characters, must start with a letter, no spaces, letters numbers underscore or dash only"
-           placeholder="(5-30 chars)"
-           oninput="this.value = this.value.toLowerCase(); checkPasswords();">
+           placeholder="(5-20 chars)"
+            oninput="this.value = this.value.toLowerCase(); validateUserId(); checkPasswords();">
+<br>
+<span id="userIdError"></span>
   </td>
 </tr>
 
