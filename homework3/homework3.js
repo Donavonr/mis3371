@@ -292,9 +292,8 @@ function validateForm() {
     if (!validateEmail()) valid = false;
     if (!validatePhone()) valid = false;
     if (!validateUserId()) valid = false;
-    if (!validatePasswordRules()) valid = false;
-    if (!validatePasswordMatch()) valid = false;
-
+    if (!checkPasswords()) valid = false;
+    
     if (valid) {
         document.getElementById("submitButton").style.display = "inline-block";
     } else {
