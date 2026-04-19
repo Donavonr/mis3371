@@ -303,6 +303,142 @@ function validateForm() {
 
     return valid;
 }
+function validateFirstName() {
+    let value = document.getElementById("firstname").value.trim();
+    let msg = document.getElementById("firstnameError");
+    let pattern = /^[A-Za-z'-]{1,30}$/;
+
+    if (value === "") {
+        msg.innerHTML = "First name is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (!pattern.test(value)) {
+        msg.innerHTML = "Use 1-30 letters, apostrophes, or dashes only.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
+
+function validateMiddleInitial() {
+    let value = document.getElementById("middleinit").value.trim();
+    let msg = document.getElementById("middleinitError");
+    let pattern = /^[A-Za-z]?$/;
+
+    if (!pattern.test(value)) {
+        msg.innerHTML = "Middle initial must be blank or 1 letter only.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (value === "") {
+        msg.innerHTML = "";
+        return true;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
+
+function validateLastName() {
+    let value = document.getElementById("lastname").value.trim();
+    let msg = document.getElementById("lastnameError");
+    let pattern = /^[A-Za-z'-]{1,30}$/;
+
+    if (value === "") {
+        msg.innerHTML = "Last name is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (!pattern.test(value)) {
+        msg.innerHTML = "Use 1-30 letters, apostrophes, or dashes only.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
+
+function validateEmail() {
+    let field = document.getElementById("email");
+    let value = field.value.trim().toLowerCase();
+    let msg = document.getElementById("emailError");
+    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    field.value = value;
+
+    if (value === "") {
+        msg.innerHTML = "Email is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (!pattern.test(value)) {
+        msg.innerHTML = "Enter email as name@domain.tld.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
+
+function validateZip() {
+    let value = document.getElementById("zip").value.trim();
+    let msg = document.getElementById("zipError");
+    let pattern = /^[0-9]{5}$/;
+
+    if (value === "") {
+        msg.innerHTML = "ZIP code is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (!pattern.test(value)) {
+        msg.innerHTML = "ZIP code must be exactly 5 digits.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
+
+function validateUserId() {
+    let field = document.getElementById("userId");
+    let value = field.value.trim().toLowerCase();
+    let msg = document.getElementById("userIdError");
+    let pattern = /^[a-z][a-z0-9_-]{4,19}$/;
+
+    field.value = value;
+
+    if (value === "") {
+        msg.innerHTML = "User ID is required.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    if (!pattern.test(value)) {
+        msg.innerHTML = "Must start with a letter, be 5-20 chars, and use only letters, numbers, _ or -.";
+        msg.style.color = "red";
+        return false;
+    }
+
+    msg.innerHTML = "pass";
+    msg.style.color = "green";
+    return true;
+}
 
 window.onload = function() {
     updateSliderValue();
