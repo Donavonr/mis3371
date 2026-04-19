@@ -131,7 +131,10 @@
        maxlength="11"
        pattern="^[0-9]{3}-[0-9]{2}-[0-9]{4}$"
        required
-       title="Enter SSN in format 123-45-6789">
+       title="Enter SSN in format 123-45-6789"
+       oninput="formatSSN(); validateSSN()">
+<br>
+<span id="ssnError"></span>
            </td>
        </tr>
            
@@ -150,7 +153,9 @@
                     oninvalid="this.setCustomValidity('At least 1 address line Required')"
                     oninput="this.setCustomValidity('')"
                     placeholder="1234 Main St (req'd)"
-            >
+                     oninput="validateAddress1()">
+<br>
+<span id="addr1Error"></span>
         <span id="addr1_text"></span></td>
     </tr>
     <tr  class="form">
@@ -164,7 +169,9 @@
                     id="addr2" 
                     name="addr2" 
                     placeholder="Apt #, etc..."
-            >
+                     oninput="validateAddress2()">
+<br>
+<span id="addr2Error"></span>
         <span id="addr2_text"></span>       
         </td>
     </tr>
@@ -176,13 +183,15 @@
 
   <td class="cityrow">
     <input type="text"
-           id="city"
-           name="city"
-           maxlength="30"
-           placeholder="Anytown (req'd)"
-           required
-           oninvalid="this.setCustomValidity('You forgot City')"
-           oninput="this.setCustomValidity('')">
+       id="city"
+       name="city"
+       maxlength="30"
+       placeholder="Anytown (req'd)"
+       required
+       title="City must be 2 to 30 characters"
+       oninput="validateCity()">
+<br>
+<span id="cityError"></span>
 
     <select id="state" name="state" required>
       <option value=""></option>
@@ -245,10 +254,10 @@
        id="zip"
        name="zip"
        required
-       title="Enter 5-digit ZIP or ZIP+4 format like 77002-1234"
+       title="Enter 5-digit ZIP format like 77002"
        oninvalid="this.setCustomValidity('ZIP must be 5 digits')"
       oninput="validateZip()"
-       placeholder="00000">
+       placeholder="00000"
 <br>
 <span id="zipError"></span>
 
