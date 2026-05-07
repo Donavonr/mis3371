@@ -1,8 +1,9 @@
 body{
   margin:0;
   font-family: Verdana, Geneva, sans-serif;
-  background:#7fb6d6;         
+  background:#7fb6d6;
   color:#000;
+  padding-bottom:120px;
 }
 
 
@@ -46,11 +47,6 @@ body{
   white-space:nowrap;
 }
 
-body {
-    background-color: #7fb6d6;
-    font-family: Arial;
-    padding-bottom: 120px;
-}
 
 #body{
   background:#7fb6d6;         
