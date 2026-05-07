@@ -154,13 +154,6 @@ button:hover{
     margin-bottom: 15px;
 }
 
-.iframe-container {
-    width: 520px;
-    margin: auto;
-    padding: 15px;
-    background-color: #7fb6d6;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
 }
 
 iframe {
