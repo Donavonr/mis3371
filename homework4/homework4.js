@@ -582,6 +582,15 @@ function validateCity() {
     return true;
 }
 
+fetch("states.txt")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("state").innerHTML = data;
+})
+.catch(error => {
+    console.log("Error loading states:", error);
+});
+
 window.onload = function() {
     updateSliderValue();
 };
