@@ -154,8 +154,14 @@ button:hover{
     margin-bottom: 15px;
 }
 
+.iframe-container {
+    width: 520px;
+    margin: auto;
+    padding: 15px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
 }
-
 iframe {
     border: none;
     width: 100%;
