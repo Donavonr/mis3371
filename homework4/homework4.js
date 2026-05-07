@@ -1,4 +1,3 @@
-
 document.getElementById("today").innerHTML =
     new Date().toLocaleDateString();
 
@@ -586,4 +585,3 @@ function validateCity() {
 window.onload = function() {
     updateSliderValue();
 };
-
