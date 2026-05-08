@@ -172,3 +172,6 @@ iframe {
     bottom: 0;
     width: 100%;
 }
+#welcomeMessage {
+    text-align: center;
+}
