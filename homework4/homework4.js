@@ -1,5 +1,4 @@
-document.getElementById("today").innerHTML =
-    new Date().toLocaleDateString();
+
 
 function reviewForm() {
     let firstName = document.getElementsByName("firstname")[0].value.trim();
