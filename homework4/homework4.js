@@ -591,8 +591,7 @@ fetch("states.txt")
     console.log("Error loading states:", error);
 });
 
-window.onload = function() {
-    updateSliderValue();
+
 };
 document.getElementById("firstname").addEventListener("blur", function () {
 
