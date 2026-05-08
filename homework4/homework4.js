@@ -594,3 +594,24 @@ fetch("states.txt")
 window.onload = function() {
     updateSliderValue();
 };
+document.getElementById("firstname").addEventListener("blur", function () {
+
+    if (document.getElementById("rememberMe").checked) {
+
+        localStorage.setItem("firstName", this.value);
+
+    }
+
+});
+window.onload = function () {
+
+    updateSliderValue();
+
+    let savedName = localStorage.getItem("firstName");
+
+    if (savedName) {
+
+        document.getElementById("firstname").value = savedName;
+
+    }
+
