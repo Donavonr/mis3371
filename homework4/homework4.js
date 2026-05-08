@@ -598,14 +598,21 @@ document.getElementById("firstname").addEventListener("blur", function () {
 
     }
 function saveRememberMe() {
+
     let remember = document.getElementById("rememberMe").checked;
+
     let firstName = document.getElementById("firstname").value.trim();
 
     if (remember && firstName !== "") {
+
         localStorage.setItem("firstName", firstName);
+
     } else {
+
         localStorage.removeItem("firstName");
+
     }
+
 }
 });
 
@@ -621,8 +628,14 @@ window.onload = function () {
     if (savedName) {
 
         document.getElementById("firstname").value = savedName;
+
         document.getElementById("welcomeMessage").innerHTML =
-        "Welcome back, " + savedName;
+            "Welcome back, " + savedName;
+
+    } else {
+
+        document.getElementById("welcomeMessage").innerHTML =
+            "Welcome New User";
 
     }
 
