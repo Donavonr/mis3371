@@ -591,8 +591,6 @@ fetch("states.txt")
     console.log("Error loading states:", error);
 });
 
-
-};
 document.getElementById("firstname").addEventListener("blur", function () {
 
     if (document.getElementById("rememberMe").checked) {
@@ -602,7 +600,11 @@ document.getElementById("firstname").addEventListener("blur", function () {
     }
 
 });
+
 window.onload = function () {
+
+    document.getElementById("today").innerHTML =
+        new Date().toLocaleDateString();
 
     updateSliderValue();
 
@@ -613,4 +615,6 @@ window.onload = function () {
         document.getElementById("firstname").value = savedName;
 
     }
+
+};
 
