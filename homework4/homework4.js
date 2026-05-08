@@ -612,6 +612,8 @@ window.onload = function () {
     if (savedName) {
 
         document.getElementById("firstname").value = savedName;
+        document.getElementById("welcomeMessage").innerHTML =
+        "Welcome back, " + savedName;
 
     }
 
