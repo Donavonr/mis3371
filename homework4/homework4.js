@@ -591,35 +591,33 @@ fetch("states.txt")
 });
 
 document.getElementById("firstname").addEventListener("blur", function () {
-
     if (document.getElementById("rememberMe").checked) {
-
-        localStorage.setItem("firstName", this.value);
-
+        localStorage.setItem("firstName", this.value.trim());
     }
+});
 
+document.getElementById("rememberMe").addEventListener("change", function () {
+    let firstName = document.getElementById("firstname").value.trim();
+
+    if (this.checked && firstName !== "") {
+        localStorage.setItem("firstName", firstName);
+    } else {
+        localStorage.removeItem("firstName");
+    }
 });
 
 function saveRememberMe() {
     let remember = document.getElementById("rememberMe").checked;
-
     let firstName = document.getElementById("firstname").value.trim();
 
     if (remember && firstName !== "") {
-
         localStorage.setItem("firstName", firstName);
-
     } else {
-
         localStorage.removeItem("firstName");
-
     }
-
 }
-});
 
 window.onload = function () {
-
     document.getElementById("today").innerHTML =
         new Date().toLocaleDateString();
 
@@ -628,28 +626,23 @@ window.onload = function () {
     let savedName = localStorage.getItem("firstName");
 
     if (savedName) {
-
         document.getElementById("firstname").value = savedName;
 
         document.getElementById("welcomeMessage").innerHTML =
             "Welcome back, " + savedName;
+
         document.getElementById("newUserOption").innerHTML =
-'<a href="#" onclick="startNewUser()">Not you? Start as a New User</a>';
-
+            '<a href="#" onclick="startNewUser()">Not you? Start as a New User</a>';
     } else {
-
         document.getElementById("welcomeMessage").innerHTML =
             "Welcome New User";
 
+        document.getElementById("newUserOption").innerHTML = "";
     }
-
 };
+
 function startNewUser() {
-
     localStorage.removeItem("firstName");
-
     document.getElementById("firstname").value = "";
-
     location.reload();
-
 }
