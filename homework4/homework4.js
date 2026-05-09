@@ -624,6 +624,8 @@ window.onload = function () {
 
         document.getElementById("welcomeMessage").innerHTML =
             "Welcome back, " + savedName;
+        document.getElementById("newUserOption").innerHTML =
+'<a href="#" onclick="startNewUser()">Not you? Start as a New User</a>';
 
     } else {
 
@@ -633,4 +635,11 @@ window.onload = function () {
     }
 
 };
+function startNewUser() {
+
+    localStorage.clear();
+
+    location.reload();
+
+}
 
